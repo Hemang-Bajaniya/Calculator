@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/script.js"></script>
+    <title>Calculator</title>
+</head>
+<body>
+
+    <div class="mode" id="mode">
+        <div class="btn" onclick="theme()">
+            <img src="svg/dark.svg" id="theme">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="calc">
+            <div class="screen" id="screen"></div>
+
+            <div class="btn-area">
+
+                <div class="row">
+                    <button id="cls" onclick="cls()">Clear</button>
+                    <button value="/" onclick="addScreen(value)" class="sp">/</button>
+                    <button value="X" onclick="addScreen(value)" class="sp">X</button>
+                </div>
+
+                <div class="row">
+                    <button value="(" onclick="addScreen(value)">(</button>
+                    <button value=")" onclick="addScreen(value)">)</button>
+                    <button value="%" onclick="addScreen(value)">%</button>
+                    <button value="^" onclick="addScreen(value)" class="sp">^</button>
+                </div>
+
+                <div class="row">
+                    <button value="9" onclick="addScreen(value)">9</button>
+                    <button value="8" onclick="addScreen(value)">8</button>
+                    <button value="7" onclick="addScreen(value)">7</button>
+                    <button value="-" onclick="addScreen(value)" class="sp">-</button>
+                </div>
+
+                <div class="row">
+                    <button value="6" onclick="addScreen(value)">6</button>
+                    <button value="5" onclick="addScreen(value)">5</button>
+                    <button value="4" onclick="addScreen(value)">4</button>
+                    <button value="+" onclick="addScreen(value)" class="sp">+</button>
+                </div>
+
+                <div class="row">
+                    <button value="3" onclick="addScreen(value)">3</button>
+                    <button value="2" onclick="addScreen(value)">2</button>
+                    <button value="1" onclick="addScreen(value)">1</button>
+                </div>
+                <div class="row">
+                    <button value="0" onclick="addScreen(value)">0</button>
+                    <button value="00" onclick="addScreen(value)">00</button>
+                    <button value="." onclick="addScreen(value)">.</button>
+                    <button onclick="solve()" id="eql">=</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    transition: .3s ease-in-out;
+    position: relative;
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    color: wheat;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgb(255, 110, 134),rgb(255, 255, 41));
+    top: -5rem;
+    left: 20rem;
+    clip-path: circle(26%);
+    clip-path: (26% at 151px 263px);
+    z-index: -1;
+    width: 20%;
+    animation: jump1 4s ease infinite;
+}
+
+.container::after{
+    content: '';
+    position: absolute;
+    height: 30%;
+    width: 20%;
+    background: linear-gradient(120deg,rgb(4, 0, 255),rgb(1, 81, 255));
+    top: 26rem; 
+    right: 22rem;
+    clip-path: circle(25%);
+    clip-path: (25% at 117px 200px);
+    z-index: -1;
+    animation: jump2 4s ease infinite;
+}
+
+nav{
+    background-color: aliceblue;
+}
+
+.top{
+    display: flex;
+}
+
+.mode{
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #fff;
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: 0px 0px 10px rgba(0,0,0, 0.1);
+    transition: .3s ease-in-out;
+}
+
+.btn img{
+    src: url(svg/dark.svg);
+    height: 100%;
+}
+
+.btn{
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.dark.mode{
+    background-color: rgb(37, 37, 37);
+    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.2);
+}
+
+.dark{
+    background-color: #091921;
+}
+
+.dark{
+    transition: .3s ease-in-out;
+}
+
+.dark .calc{
+    background-color: transparent;
+    border-top: 1px solid rgba(216, 216, 216, 0.23);
+    border-left: 1px solid rgba(216, 216, 216, 0.23);
+}
+
+.dark .screen{
+    background-color: tra;
+    color: white;
+}
+
+.dark button{
+    background-color: transparent;
+    color: white;
+    box-shadow: none;
+}
+
+.dark button:active{
+    box-shadow:  inset 0px 0px 5px rgba(255, 255, 255, 0.1), inset 0px 0px 5px rgba(255, 255, 255, 0.1);
+}
+
+.dark button#cls{
+    flex: 2;
+    background-color: rgba(255, 255, 255, 0.1)
+}
+
+.dark button#eql{
+    height: calc(8.2rem + .77rem);
+    transform: translateY(-77px);
+    background-color: rgba(255, 255, 255, 0.1)
+}
+
+.dark button#cls:active{
+    background-color: rgba(61, 64, 255, 0.925);
+}
+
+.dark button#eql:active{
+    background-color: rgb(75, 252, 119);
+}
+
+.container{
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    place-items: center;
+}
+
+.calc{
+    background-color: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(2px);
+    height: 35rem;
+    width: 20rem;
+    border-top: 1px solid rgba(192, 183, 183, 0.2);
+    border-left: 1px solid rgba(192, 183, 183, 0.2);
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+    margin-top: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    border-top: 1px solid rgba(143, 143, 143, 0.23);
+    border: 1px solid rgba(143, 143, 143, 0.23);
+}
+
+.screen{
+    height: 12.5%;
+    width: 95%;
+    display: flex;
+    margin: 1rem auto;
+    font-family: consolas;
+    font-size: 1.8rem;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgba(121, 121, 121, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 3px;
+    color: #333;
+    padding-right: 5px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: .5rem;
+}
+
+.btn-area{
+    display: flex;
+    flex-direction: column;
+    height: 430px;
+    width: fit-content;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    height: fit-content;
+    flex-direction: row;
+}
+
+button{
+    height: 4.2rem;
+    width: 4.2rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(3px);
+    border-radius: 5px;
+    margin: .3rem;
+    font-size: 1.1rem;
+    border-color: transparent;
+    box-shadow:  inset 3px 7px 5px rgba(143, 132, 132, 0.1), inset -3px -7px 5px rgba(146, 138, 138, 0.1);
+}
+
+button#cls{
+    flex: 2;
+    background-color: rgba(73, 73, 255, 0.89);
+}
+
+button#eql{
+    height: calc(8.2rem + .77rem);
+    transform: translateY(-77px);
+    background-color: rgb(129, 238, 129);
+}
+
+button:active{
+    scale: .97;
+    box-shadow:  inset 6px 10px 5px rgba(143, 132, 132, 0.1), inset -6px -10px 5px rgba(146, 138, 138, 0.1);
+}
+
+.low{
+    display: flex;
+    flex-direction: row;
+}
+
+button.sp{
+    color: rgb(240, 69, 69);
+    border: 1px solid transparent;
+}
+
+@keyframes jump1 {
+    50%{
+        transform: translateY(2rem);
+    }
+}
+@keyframes jump2 {
+    50%{
+        transform: translateY(-2rem);
+    }
+}
